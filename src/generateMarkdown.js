@@ -36,7 +36,8 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   - [Installation](#installation)
-  - [Usage](#usage)${contToc(data.credits)}
+  - [Usage](#usage)
+  ${contToc(data.credits)}
   - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)

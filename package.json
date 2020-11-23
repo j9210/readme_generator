@@ -1,14 +1,22 @@
 {
-  "name": "static-site",
+  "name": "readme_generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "[How to create a Professional README](./readme-guide.md)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "j9210",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j9210/readme_generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/j9210/readme_generator/issues"
+  },
+  "homepage": "https://github.com/j9210/readme_generator#readme"
 }

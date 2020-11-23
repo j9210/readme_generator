@@ -1,32 +1,35 @@
-# MealQueue
+# Readme Generator
 
   ## Description
-  Meal Queue is an aide to help individuals come up with dinner ideas. Type in a food item and a list of different recipes is presented with an option to view a video tutorial.https://axeliono.github.io/group-project-1/ <br>
-  dsa
+  Create a readme for your projects!<br>
+  https://github.com/j9210/readme_generator
 
-  <img src = "https://img.shields.io/badge/License-Apache License 2.0-red">
+  <img src = "https://img.shields.io/badge/License-MIT-red">
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
+   - [Contributing](#contributing)
   - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
 
   ## Installation
-  fd
+  Go to the git repository and clone the code.
 
   ## Usage
-  as
+  Run the application in node. Answer the questions.
+  ## Contributing
+  sample
   
 
   ## License
-  Apache License 2.0
+  MIT
 
   ## Tests
   undefined
 
   ## Questions
-  Check out my github profile at [Github](http://github.com/af)
+  Check out my github profile at [Github](http://github.com/j9210)
 
-  Contact me at <dsa>
+  Contact me at <juliaolivia.t@gmail.com>
