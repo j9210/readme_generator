@@ -1,39 +1,13 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 // to generate html
-const generateMarkdown = require("./src/page-template.js");
+const generateMarkdown = require("./src/generateMarkdown");
 
 // array of questions for user
 const questions = [
     {
         type: 'input',
-        name: 'username',
-        message: "What is your Github username?",
-        validate: nameInput => {
-            if (nameInput) {
-                return true; 
-            } else {
-                console.log("Please enter your username!");
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'Email',
-        message: 'What is your email address? (Required)',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log("Please enter the title of your project!");
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'What is the title of your project? (Required)',
         validate: nameInput => {
             if (nameInput) {
@@ -45,8 +19,14 @@ const questions = [
         }
     },
     {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Which license would you like to use for your project? Pick one.',
+        choices: ['Apache License 2.0', 'GNU GPLv3','MIT','ISC']
+    },
+    {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Please enter a description of your project. (Required)',
         validate: nameInput => {
             if (nameInput) {
@@ -59,7 +39,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Link',
+        name: 'link',
         message: 'Please include a link of your deployed project here.',
         validate: nameInput => {
             if (nameInput) {
@@ -72,7 +52,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
         validate: nameInput => {
             if (nameInput) {
@@ -85,7 +65,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Provide instructions and examples for use. Include screenshots as needed.',
         validate: nameInput => {
             if (nameInput) {
@@ -98,27 +78,28 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Credits',
-        message: 'List your collaborators, any third-party assets that require attribution, and any tutorials you followed.'
-    },
-    {
-        type: 'checkbox',
-        name: 'License',
-        message: 'Which license would you like to use for your project? Pick one.',
-        choices: ['Apache License 2.0', 'GNU GPLv3','MIT','ISC']
-    },
+        name: 'screenshot',
+        message: 'Provide the file name of a screenshot of your functional application. Make sure it is located in the assets/images folder. (Required)',
+        validate: nameInput => {
+          if (nameInput){
+            return true;
+          } else {
+            console.log("Please provide a screenshot!");
+            return false;
+          }
+        }
+      },
     {
         type: 'confirm',
-        name: 'confirmFeatures',
-        message: 'Would you like to add a list of your projects features?',
-        default: true
+        name: 'confirmCredits',
+        message: 'Would you like to list any collaborators, third-party assets that require attribution, or tutorials you followed?'
     },
     {
         type: 'input',
-        name: 'Features',
-        message: 'List the features',
-        when: ({confirmFeatures}) => {
-            if (confirmFeatures) {
+        name: 'credits',
+        message: 'List your collaborators, any third-party assets that require attribution, and any tutorials you followed.',
+        when: ({confirmCredits}) => {
+            if (confirmCredits) {
                 return true;
             } else {
                 return false;
@@ -129,22 +110,57 @@ const questions = [
         type: 'input',
         name: 'Tests',
         message: ''
-
-    }
-
-    
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: "What is your Github username?",
+        validate: nameInput => {
+            if (nameInput) {
+                return true; 
+            } else {
+                console.log("Please enter your username!");
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address? (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log("Please enter the title of your project!");
+                return false;
+            }
+        }
+    }  
 ];
 
 
 // function to write README file
-// function writeToFile(fileName, data) {
-    
-// }
+const writeToFile = data => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/README.md', generateMarkdown(data), err => {
+            if (err) {
+                reject (err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: "Readme created!"
+            
+            })
+        })
+    })
+}
 
 // function to initialize program
-// function init() {
-
-// }
+const init = () => inquirer.prompt(questions);
 
 // function call to initialize program
-// init();
+init()
+    .then((data) => writeToFile(data))
+    .catch((err) => console.log(err));
