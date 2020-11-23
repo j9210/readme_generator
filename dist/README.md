@@ -1,11 +1,12 @@
-# jk
+# Robotime
 
-  ## Description:
-  saldkfja
-  asdkfjs
+  ## Description
+  The time of the robots to dance and frolick freely without worry of human onlookers
+  thisistheling.com
+
+  <img src = "https://img.shields.io/badge/License-MIT-red">
 
   ## Table of Contents
-  - [License](#license)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -13,26 +14,25 @@
   - [Github](#github)
   - [Email](#email)
 
-  ## License:
-  [![License:Apache License 2.0,GNU GPLv3,MIT,ISC](https://img.shields.io/badge/License-Apache License 2.0,GNU GPLv3,MIT,ISC-yellow.svg)](https://opensource.org/licenses/Apache License 2.0,GNU GPLv3,MIT,ISC)
+  ## Installation
+  1 dance 2 scream 3 cut your heart out
 
- 
+  ## Usage
+  no
+  <img src ='assets/images/ghf' height = 450px>
 
-  ## Installation:
-  jkala;dl;safj;lasjfkldsjafkldsa;jfkdsj
+  ## Credits
+  Tomy, Rogher, sim
 
-  ## Usage:
-  djsakfldjs;aljdfkljfkdjsa;fsddklfjds;lafjlsa
-  <img src ='assets/images/jkld' height = 450px>
-
-  ## Credits:
-  tomy 
-
-  ## Tests:
+  ## Tests
   undefined
 
-  ## Github: 
+  ## Github 
   Check out my github profile at [Github](http://github.com/j9210)
 
-  ## Email:
-  If you have any questions, feel free to contact me at <juliaiolivia,t@gmail.com>
+  ## Email
+  If you have any questions, feel free to contact me at <juliaolivia.t@gmail.com>
+
+  ## License
+
+  Licensed under the MIT.

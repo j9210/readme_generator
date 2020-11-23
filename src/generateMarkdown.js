@@ -1,13 +1,32 @@
+//Generate License
+const generateLicense = license => {
+  if (!license) {
+    return '';
+  }
+  return `## License
+
+  Licensed under the ${license}.`
+}
+
+//Create a badge for the selected license
+const generateBadge = license => {
+  if(!license) {
+    return '';
+  }
+  return `<img src = "https://img.shields.io/badge/License-${license}-red">`
+}
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ## Description:
+  ## Description
   ${data.description}
   ${data.link}
 
+  ${generateBadge(data.license)}
+
   ## Table of Contents
-  - [License](#license)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -15,29 +34,26 @@ function generateMarkdown(data) {
   - [Github](#github)
   - [Email](#email)
 
-  ## License:
-  [![License:${data.license}](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/${data.license})
-
- 
-
-  ## Installation:
+  ## Installation
   ${data.installation}
 
-  ## Usage:
+  ## Usage
   ${data.usage}
   <img src ='assets/images/${data.screenshot}' height = 450px>
 
-  ## Credits:
+  ## Credits
   ${data.credits}
 
-  ## Tests:
+  ## Tests
   ${data.tests}
 
-  ## Github: 
+  ## Github 
   Check out my github profile at [Github](http://github.com/${data.github})
 
-  ## Email:
+  ## Email
   If you have any questions, feel free to contact me at <${data.email}>
+
+  ${generateLicense(data.license)}
 `;
 }
 
