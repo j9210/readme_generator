@@ -1,10 +1,10 @@
-# Readme Generator
+# sample
 
   ## Description
-  Create a readme for your projects!<br>
-  https://github.com/j9210/readme_generator
+  sample<br>
+  sample
 
-  <img src = "https://img.shields.io/badge/License-MIT-red">
+  <img src = "https://img.shields.io/badge/License-Apache License 2.0-red">
 
   ## Table of Contents
   - [Installation](#installation)
@@ -15,16 +15,16 @@
   - [Questions](#questions)
 
   ## Installation
-  Go to the git repository and clone the code.
+  sample
 
   ## Usage
-  Run the application in node. Answer the questions.
+  sample
   ## Contributing
   sample
   
 
   ## License
-  MIT
+  Apache License 2.0
 
   ## Tests
   undefined
