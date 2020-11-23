@@ -1,59 +1,63 @@
-//Generate License
-const generateLicense = license => {
-  if (!license) {
-    return '';
-  }
-  return `## License
-
-  Licensed under the ${license}.`
-}
-
 //Create a badge for the selected license
 const generateBadge = license => {
   if(!license) {
     return '';
   }
   return `<img src = "https://img.shields.io/badge/License-${license}-red">`
-}
+};
 
+// dont show contributors section unless added
+const generateCont = credits => {
+  if (!credits) {
+    return '';
+  }
+  return `## Contributing
+  ${credits}
+  `
+};
+
+// add contributor link to table of contents
+const contToc = credits => {
+  if (!credits) {
+    return '';
+  }
+  return ` - [Contributing](#contributing)`
+
+}
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
   ## Description
-  ${data.description}
+  ${data.description}<br>
   ${data.link}
 
   ${generateBadge(data.license)}
 
   ## Table of Contents
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
+  - [Usage](#usage)${contToc(data.credits)}
+  - [License](#license)
   - [Tests](#tests)
-  - [Github](#github)
-  - [Email](#email)
+  - [Questions](#questions)
 
   ## Installation
   ${data.installation}
 
   ## Usage
   ${data.usage}
-  <img src ='assets/images/${data.screenshot}' height = 450px>
+  ${generateCont(data.credits)}
 
-  ## Credits
-  ${data.credits}
+  ## License
+  ${data.license}
 
   ## Tests
   ${data.tests}
 
-  ## Github 
+  ## Questions
   Check out my github profile at [Github](http://github.com/${data.github})
 
-  ## Email
-  If you have any questions, feel free to contact me at <${data.email}>
-
-  ${generateLicense(data.license)}
+  Contact me at <${data.email}>
 `;
 }
 

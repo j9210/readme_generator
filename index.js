@@ -32,7 +32,7 @@ const questions = [
             if (nameInput) {
                 return true;
             } else {
-                console.log("Please enter the title of your project!");
+                console.log("Please enter a description your project!");
                 return false;
             }
         }
@@ -45,7 +45,7 @@ const questions = [
             if (nameInput) {
                 return true;
             } else {
-                console.log("Please enter the title of your project!");
+                console.log("Please include a link to your deployed project!");
                 return false;
             }
         }
@@ -58,7 +58,7 @@ const questions = [
             if (nameInput) {
                 return true;
             } else {
-                console.log("Please enter the title of your project!");
+                console.log("Please enter the installation instructions for your project!");
                 return false;
             }
         }
@@ -66,21 +66,16 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use. Include screenshots as needed.',
+        message: 'Provide instructions and examples for use.',
         validate: nameInput => {
             if (nameInput) {
                 return true;
             } else {
-                console.log("Please enter the title of your project!");
+                console.log("Please enter usage instructions and examples for your project!");
                 return false;
             }
         }
     },
-    {
-        type: 'input',
-        name: 'screenshot',
-        message: 'Provide the file name of a screenshot of your functional application. Make sure it is located in the assets/images folder.',
-      },
     {
         type: 'confirm',
         name: 'confirmCredits',

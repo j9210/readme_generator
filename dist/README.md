@@ -1,38 +1,32 @@
-# Robotime
+# MealQueue
 
   ## Description
-  The time of the robots to dance and frolick freely without worry of human onlookers
-  thisistheling.com
+  Meal Queue is an aide to help individuals come up with dinner ideas. Type in a food item and a list of different recipes is presented with an option to view a video tutorial.https://axeliono.github.io/group-project-1/ <br>
+  dsa
 
-  <img src = "https://img.shields.io/badge/License-MIT-red">
+  <img src = "https://img.shields.io/badge/License-Apache License 2.0-red">
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
+  - [License](#license)
   - [Tests](#tests)
-  - [Github](#github)
-  - [Email](#email)
+  - [Questions](#questions)
 
   ## Installation
-  1 dance 2 scream 3 cut your heart out
+  fd
 
   ## Usage
-  no
-  <img src ='assets/images/ghf' height = 450px>
+  as
+  
 
-  ## Credits
-  Tomy, Rogher, sim
+  ## License
+  Apache License 2.0
 
   ## Tests
   undefined
 
-  ## Github 
-  Check out my github profile at [Github](http://github.com/j9210)
+  ## Questions
+  Check out my github profile at [Github](http://github.com/af)
 
-  ## Email
-  If you have any questions, feel free to contact me at <juliaolivia.t@gmail.com>
-
-  ## License
-
-  Licensed under the MIT.
+  Contact me at <dsa>
