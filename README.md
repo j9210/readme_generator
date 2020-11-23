@@ -1,7 +1,7 @@
 # ReadMe Generator
 
   ## Description
-  Generator a readme for your project!<br>
+  A program to generate readme's for your projects.<br>
   https://github.com/j9210/readme_generator
 
   <img src = "https://img.shields.io/badge/License-MIT-red">
@@ -15,12 +15,12 @@
   - [Questions](#questions)
 
   ## Installation
-  Clone the code. Open in terminal with node. Answer the questions.
+  Use the code in node to generate readme.
 
   ## Usage
-  Answer questions when prompted. Great for any project.
+  Open your terminal within the root folder of the program. Call index.js with node. Answer questions when prompted. Copy generated readme. Voila.
   ## Contributing
-  sample people
+  Sample, so y'all know it's working.
   
 
   ## License
